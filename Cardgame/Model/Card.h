@@ -15,10 +15,3 @@
 - (int)match:(NSArray *) otherCards;
 
 @end
-
-// test ren
-// test ren
-// test ren
-// latest change
-
-// lllatest change

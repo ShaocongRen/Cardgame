@@ -21,13 +21,5 @@
     
     return score;
 }
-// add this line
-//test
-//test2
-//test4
 
-//test5
-/// lllatest change
-
-/// lllatest change modify
 @end
