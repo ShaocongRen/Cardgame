@@ -21,4 +21,8 @@
     
     return score;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> FETCH_HEAD
 @end
