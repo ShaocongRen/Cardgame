@@ -26,7 +26,7 @@
     self = [super init];
     
     if (self) {
-        for (int i = 0; i > count; i++) {
+        for (int i = 0; i < count; i++) {
             Card *card = [deck drawRandomCard];
             if (card) {
                 [self.cards addObject:card];
@@ -40,7 +40,7 @@
     return self;
 }
 
-static const int MISMATHC_PENALTY = 2;
+static const int MISMATHCH_PENALTY = 2;
 static const int MATCH_BONUS = 4;
 static const int COST_TO_CHOOSE = 1;
 
@@ -54,12 +54,15 @@ static const int COST_TO_CHOOSE = 1;
             for (Card *otherCard in self.cards) {
                 if (otherCard.isChosen && !otherCard.isMatched) {
                     int matchScore = [card match:@[otherCard]];//@ means matching multiple cards
-                    if (matchScore){
+                    if (matchScore)
+                    {
                         self.score += matchScore * MATCH_BONUS;
                         card.matched = YES;
                         otherCard.matched = YES;
-                    } else {
-                        self.score -= MISMATHC_PENALTY;
+                    }
+                    else
+                    {
+                        self.score -= MISMATHCH_PENALTY;
                         otherCard.chosen = NO;
                     }
                     break;
